@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: configclient
+  cloud:
+    consul:
+      host: localhost #注册consul服务的主机
+      port: 8500      #注册consul服务的端口号
+      discovery:
+        register-health-check: true #开启consul服务的健康检查
+        service-name: ${spring.application.name}  #指定注册的服务名称 默认就是应用名
